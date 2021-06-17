@@ -1,10 +1,5 @@
 package utiles;
 
-/*
- * @author Rafael Alberto Caballero Osuna
- * https://github.com/rafacab1
- */
-
 public class Menu {
   
   // Propiedades Menu //////
