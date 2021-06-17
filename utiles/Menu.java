@@ -29,7 +29,6 @@ public class Menu {
     this.opciones = opciones;
   }
   
-  // Métodos //////
   
   /**
    * Método que muestra el menú y pide la opción
