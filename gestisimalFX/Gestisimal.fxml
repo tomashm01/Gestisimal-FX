@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestisimalFX.GestisimalController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints maxHeight="500.0" minHeight="500.0" prefHeight="500.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+   </rowConstraints>
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu fx:id="menuListado" mnemonicParsing="false" onHidden="#quitaInfo" onShown="#darInfo" text=" _Listado">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#verArticulos" text="Lista" />
+                  <MenuItem mnemonicParsing="false" onAction="#listarInd" text="Individual" />
+            </items>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/listado.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Menu>
+            <Menu fx:id="menuAlta" mnemonicParsing="false" onHidden="#quitaInfo" onShown="#darInfo" text=" _Alta">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/plus-solid.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#darAlta" text="Dar de alta un artículo" />
+               </items></Menu>
+            <Menu fx:id="menuBaja" mnemonicParsing="false" onHidden="#quitaInfo" onShown="#darInfo" text=" _Baja">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/minus-solid.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#darBaja" text="Dar de baja un artículo" />
+               </items></Menu>
+            <Menu fx:id="menuModificacion" mnemonicParsing="false" onHidden="#quitaInfo" onShown="#darInfo" text=" _Modificación">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/align-center-solid.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#modificart" text="Modificar un artículo" />
+               </items></Menu>
+            <Menu fx:id="menuentMerc" mnemonicParsing="false" onHidden="#quitaInfo" onShown="#darInfo" text=" _Entrada de Mercancía">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/entrada.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#entradaM" text="Registrar entrada de mercancía" />
+               </items></Menu>
+            <Menu fx:id="menusalMerc" mnemonicParsing="false" onHidden="#quitaInfo" onShown="#darInfo" text=" _Salida de Mercancía">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/salida.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#salidaM" text="Registrar salida de mercancía" />
+               </items></Menu>
+          <Menu fx:id="menuUtils" mnemonicParsing="false" onHidden="#quitaInfo" onShown="#darInfo" text=" _Utilidades">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#exporta" text="Exportar" />
+                  <MenuItem mnemonicParsing="false" onAction="#importa" text="Importar" />
+                  <MenuItem fx:id="exitmenubtn" mnemonicParsing="false" onAction="#salir" text="Salir">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="X" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/book-open-solid.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Separator prefWidth="200.0" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+      <Label fx:id="quehace" text="Realizado por:Tomas Hidalgo" GridPane.rowIndex="2">
+         <padding>
+            <Insets left="10.0" />
+         </padding></Label>
+      <ImageView fx:id="background" fitHeight="504.0" fitWidth="922.0" preserveRatio="true" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <image>
+            <Image url="@menu.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</GridPane>
