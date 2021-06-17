@@ -1,12 +1,6 @@
 package utiles;
 
 import java.util.Scanner;
-
-/*
- * @author Rafael Alberto Caballero Osuna
- * https://github.com/rafacab1
- */
-
 public class Teclado {
   private static Scanner s = new Scanner(System.in);
 /////////////////////////////////
@@ -39,10 +33,7 @@ public class Teclado {
       }
     } while (true);
   }
-  
-//////////////////////////////
-// LECTOR DE CADENAS ////////
-////////////////////////////
+
   
   /**
    * Lee una cadena
@@ -64,9 +55,6 @@ public class Teclado {
     return s.nextLine();
   }
   
-//////////////////////////////
-// LECTOR DE ENTEROS ////////
-////////////////////////////
   
   /**
    * Lee un entero.
@@ -94,9 +82,6 @@ public class Teclado {
     } while (true);
   }
   
-//////////////////////////////
-// LECTOR DE DOUBLE(s) //////
-////////////////////////////
   
   /**
    * Lee un decimal (double).
